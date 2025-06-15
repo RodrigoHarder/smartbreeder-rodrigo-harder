@@ -9,11 +9,14 @@ export function useProdutos() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
+    async function carregarDados() {
+      await new Promise((resolve) => setTimeout(resolve, 1000));
       setProdutos(produtosRaw as Produto[]);
       setCategorias(categoriasRaw as Categoria[]);
       setLoading(false);
-    }, 1000);
+    }
+
+    carregarDados();
   }, []);
 
   return { produtos, categorias, loading };
