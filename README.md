@@ -34,7 +34,7 @@ Você pode acessar a aplicação através [deste link](https://smartbreeder-rodr
 
 - **[Hooks Personalizados](https://marcosviniciosneves.medium.com/react-dominando-custom-hooks-e-otimizando-a-reutiliza%C3%A7%C3%A3o-de-l%C3%B3gica-d592ce422fc1):** desenvolvimento de *hooks* personalizados para acessar as os dados JSON dos produtos e separar a lógica dos componentes.
 - **[Colocation](https://kentcdodds.com/blog/colocation)**: Organização de diretórios para facilitar a navegação e manutenção do código.
-- **[Context API](https://www.dtidigital.com.br/blog/context-api-como-usar-de-forma-simples-e-facil): para gerenciar o estado dos produtos favoritados e compartilhá-lo entre diversos componentes e páginas.
+- **[Context API](https://www.dtidigital.com.br/blog/context-api-como-usar-de-forma-simples-e-facil)**: para gerenciar o estado dos produtos favoritados e compartilhá-lo entre diversos componentes e páginas.
 
 ---
 
