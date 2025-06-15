@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# Case challenge Smartbreeder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Visão geral do projeto
 
-Currently, two official plugins are available:
+Projeto desenvolvido como parte do processo seletivo para a vaga de desenvolvedor front-end. A aplicação apresenta um cabeçalho com links para a página de produtos e a página de favoritos, bem como um ícone de coração que indica a quantidade de itens favoritados e também redireciona para a página de favoritos. Na página de produtos é possível ver os cartões com os nomes dos produtos, preço e opções para ver mais detalhes e favoritar o item. Os produtos podem ser filtrados através do nome, faixa de preço e categoria. Ao clicar no botão "Ver detalhes", um modal abre na tela com nome do produto, preço, descrição, ategorias associadas ao produto e uma tabela com as variações do item. Na página de favoritos os cartões favoritados aparecem.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Você pode acessar a aplicação através [deste link](https://smartbreeder-rodrigo-harder.vercel.app/).
 
-## Expanding the ESLint configuration
+## Instruções para execução
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### **Pré-requisitos**
+1. Certifique-se de ter o **Node.js**. As versões usadas neste projeto foram: Node (22.16.0) e npm (10.9.2).
+   - É recomendado usar o `nvm` para gerenciar as versões do Node.js.
+   - Antes de prosseguir, execute `nvm use` (e, caso necessário, `nvm install` e novamente `nvm use`).
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+2. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+4. Inicialize o ambiente de desenvolvimento com o comando `npm run dev`
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Tecnologias aplicadas
+
+- **[React.js](https://react.dev/):** biblioteca usada para a estrutura do projeto.
+- **[Material UI](https://mui.com/material-ui/getting-started/)**: para auxiliar na construção dos componentes.
+
+## Conceitos e metodologias aplicadas
+
+- **[Hooks Personalizados](https://marcosviniciosneves.medium.com/react-dominando-custom-hooks-e-otimizando-a-reutiliza%C3%A7%C3%A3o-de-l%C3%B3gica-d592ce422fc1):** desenvolvimento de *hooks* personalizados para acessar as os dados JSON dos produtos e separar a lógica dos componentes.
+- **[Colocation](https://kentcdodds.com/blog/colocation)**: Organização de diretórios para facilitar a navegação e manutenção do código.
+- **[Context API](https://www.dtidigital.com.br/blog/context-api-como-usar-de-forma-simples-e-facil): para gerenciar o estado dos produtos favoritados e compartilhá-lo entre diversos componentes e páginas.
+
+---
+
+Este documento foi criado para fornecer orientações claras sobre o *case challenge* e sua execução.
